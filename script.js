@@ -13,15 +13,3 @@ for (let i = 0; i < questionOption.length; i++) {
     }
   });
 }
-
-// REZERWOWE
-// for (let i = 0; i < questionOption.length; i++) {
-//     questionOption[i].addEventListener("click", function () {
-//       this.classList.toggle("active");
-//       let result = this.nextElementSibling;
-//       result.classList.toggle("active");
-//       if ((questionOption[i].style = "active")) {
-//         arrow[i].classList.toggle("arrow-rotate");
-//       }
-//     });
-//   }

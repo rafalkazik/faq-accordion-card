@@ -30,23 +30,24 @@ body {
   display: flex;
   flex-direction: column;
   width: 90vw;
-  max-width: 300px;
+  max-width: 400px;
   height: 100%;
-  /* padding: 2em; */
   background-image: url(./images/bg-pattern-mobile.svg);
   background-position: center top;
   background-repeat: no-repeat;
   background-color: white;
   border-radius: 20px;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
 }
 
 .top-image {
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: auto;
   position: absolute;
   top: -11rem;
-  left: 0;
+  left: -1.5rem;
 }
 
 h1 {
@@ -68,7 +69,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   cursor: pointer;
   margin-top: 1rem;
@@ -85,6 +86,7 @@ h1 {
 
 .question-arrow {
   display: block;
+  margin-left: 1rem;
 }
 
 .arrow-rotate {
@@ -98,7 +100,7 @@ h1 {
   max-height: 0;
   margin-top: 0;
   margin-right: 10px;
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 2vh, 12px);
   line-height: 1.8rem;
   color: var(--dark-grayish-blue);
   transition: 0.2s linear;
@@ -110,9 +112,9 @@ h1 {
 }
 
 /* media min 1024px */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   body {
-    padding-top: 0;
+    padding: 0;
     align-items: center;
   }
   .container {
@@ -137,14 +139,15 @@ h1 {
     display: inline-block;
     position: absolute;
     left: -100px;
-    top: 36%;
+    top: 35%;
     content: url(./images/illustration-box-desktop.svg);
     z-index: 1;
-    transform: scale(0.85);
+    transform: scale(0.65);
+    filter: drop-shadow(0rem 1rem 1rem rgba(0, 0, 0, 0.05));
   }
 
   .right-side-wrapper {
-    padding: 2rem 0 2rem 2rem;
+    padding: 1rem 0 1rem 1rem;
   }
 
   h1 {
@@ -153,10 +156,23 @@ h1 {
   }
 
   .question-box-container {
-    padding: 0 10rem 5rem 0rem;
+    padding: 0 3rem 5rem 0rem;
   }
 
   .top-image {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .right-side-wrapper {
+    padding: 2rem 0 2rem 2rem;
+  }
+
+  .question-box-container {
+    padding: 0 10rem 5rem 0rem;
+  }
+  .container::before {
+    transform: scale(0.85);
   }
 }

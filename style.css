@@ -33,7 +33,7 @@ body {
   max-width: 300px;
   height: 100%;
   /* padding: 2em; */
-  background-image: url(/images/bg-pattern-mobile.svg);
+  background-image: url(../images/bg-pattern-mobile.svg);
   background-position: center top;
   background-repeat: no-repeat;
   background-color: white;
@@ -124,8 +124,8 @@ h1 {
   }
 
   .left-side-wrapper {
-    background-image: url(/images/bg-pattern-desktop.svg),
-      url(/images/illustration-woman-online-desktop.svg);
+    background-image: url(../images/bg-pattern-desktop.svg),
+      url(../images/illustration-woman-online-desktop.svg);
     background-size: 150%, 100%;
     /* background-position: -25rem -10rem, -7rem 5rem; */
     background-position: 140% center, -7rem center;
@@ -138,7 +138,7 @@ h1 {
     position: absolute;
     left: -100px;
     top: 36%;
-    content: url(/images/illustration-box-desktop.svg);
+    content: url(../images/illustration-box-desktop.svg);
     z-index: 1;
     transform: scale(0.85);
   }

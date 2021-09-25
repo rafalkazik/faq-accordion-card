@@ -22,7 +22,7 @@ body {
   justify-content: center;
   padding: 150px 0 50px 0;
   min-height: 100vh;
-  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
 }
 
 .container {
@@ -78,6 +78,11 @@ h1 {
 .question {
   font-size: clamp(1.2rem, 3vh, 13px);
   color: var(--very-dark-grayish-blue);
+  transition: 0.1s linear;
+}
+
+.question:hover {
+  color: var(--soft-red);
 }
 
 .question-active {
@@ -111,7 +116,8 @@ h1 {
   max-height: 200px;
 }
 
-/* media min 1024px */
+/*  */
+/* media min 768px */
 @media (min-width: 768px) {
   body {
     padding: 0;
@@ -164,6 +170,8 @@ h1 {
   }
 }
 
+/*  */
+/* media min 1024px */
 @media (min-width: 1024px) {
   .right-side-wrapper {
     padding: 2rem 0 2rem 2rem;
